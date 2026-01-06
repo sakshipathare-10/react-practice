@@ -1,5 +1,42 @@
 
 📘 Concepts Used
+JSX – Write HTML inside JavaScript.
+
+Components – Reusable pieces of UI.
+
+Props – Passing data to child components.
+
+State (useState) – Manage component data.
+
+Event Handling – Respond to user actions.
+
+Conditional Rendering – Show/hide content dynamically.
+
+Lists & Keys – Render multiple items efficiently.
+
+Styling – CSS, Tailwind, or inline styles.
+
+useEffect Hook – Side effects after render.
+
+Lifting State Up – Share state between components.
+
+Props Drilling – Passing props through multiple levels.
+
+Fragments – Avoid unnecessary wrapper elements.
+
+Routing – Navigate between pages (React Router).
+
+Dynamic Routing – Route parameters (/user/:id).
+
+Context API – Share data without props drilling.
+
+Form Validation – Validate input before submit.
+
+useRef Hook – Access DOM elements directly.
+
+Error Boundaries – Catch runtime errors in UI.
+
+Environment Variables – Store secrets safely.
 
 React Functional Components are used to build the UI in a simple and modern way.
 
