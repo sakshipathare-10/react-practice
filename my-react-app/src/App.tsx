@@ -1,28 +1,54 @@
 import { useState } from "react";
-import Header from "./Header";
 
 function App() {
-  const [count, setCount] = useState<number>(0);
+  const [email, setEmail] = useState<string>("");
+  const [password, setPassword] = useState<string>("");
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    alert(`Email: ${email}\nPassword: ${password}`);
+  };
 
   return (
-    <div>
-      <Header title="React Vite TSX App" />
+    <div className="min-h-screen flex items-center justify-center bg-gray-100">
+      <form
+        onSubmit={handleSubmit}
+        className="bg-white p-6 rounded-lg shadow-md w-80"
+      >
+        <h2 className="text-2xl font-bold text-center mb-4">
+          Login
+        </h2>
 
-      <h2>Counter: {count}</h2>
+        {/* Email */}
+        <input
+          type="email"
+          placeholder="Email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          className="w-full mb-3 p-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
+          required
+        />
 
-      <button onClick={() => setCount(count + 1)}>
-        Increment
-      </button>
+        {/* Password */}
+        <input
+          type="password"
+          placeholder="Password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          className="w-full mb-4 p-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
+          required
+        />
+
+        {/* Button */}
+        <button
+          type="submit"
+          className="w-full bg-blue-500 text-black py-2 rounded hover:bg-blue-600 transition"
+        >
+          Login
+        </button>
+      </form>
     </div>
   );
 }
- (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <h1 className="text-4xl font-bold text-blue-600">
-        Tailwind CSS is Working 🚀
-      </h1>
-    </div>
-  );
-
 
 export default App;
