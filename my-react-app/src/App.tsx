@@ -1,6 +1,9 @@
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Login from "./pages/Login";
 import Toggle from "./pages/Toggle";
+import Todo from "./pages/Todo";
+
+
 
 function App() {
   return (
@@ -15,10 +18,14 @@ function App() {
         </Link>
       </nav>
 
-      <Routes>
-        <Route path="/" element={<Login />} />
-        <Route path="/toggle" element={<Toggle />} />
-      </Routes>
+     <Routes>
+  <Route path="/" element={<Login />} />
+  <Route path="/toggle" element={<Toggle />} />
+  
+  <Route path="/Todo" element={<Todo />} />
+  
+</Routes>
+
     </BrowserRouter>
   );
 }
