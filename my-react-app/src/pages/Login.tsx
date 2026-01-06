@@ -1,65 +1,37 @@
 import { useState } from "react";
 
-function App() {
+function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [isOn, setIsOn] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    alert(`Email: ${email}\nPassword: ${password}`);
+    alert("Login submitted");
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
+    <div className="flex justify-center mt-16">
       <form
         onSubmit={handleSubmit}
         className="bg-white p-6 rounded-lg shadow-md w-80 space-y-4"
       >
-        {/* Title */}
-        <h2 className="text-2xl font-bold text-center">
-          Login
-        </h2>
+        <h2 className="text-2xl font-bold text-center">Login</h2>
 
-        {/* Toggle */}
-        <div className="flex flex-col items-center gap-1">
-          <button
-            type="button"
-            onClick={() => setIsOn(!isOn)}
-            className="w-full border py-1 rounded"
-          >
-            {isOn ? "ON" : "OFF"}
-          </button>
-          <span className="text-sm text-gray-600">
-            Status: {isOn ? "Enabled" : "Disabled"}
-          </span>
-        </div>
-
-        {/* Email */}
         <input
           type="email"
           placeholder="Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
           className="w-full p-2 border rounded"
-          required
+          onChange={(e) => setEmail(e.target.value)}
         />
 
-        {/* Password */}
         <input
           type="password"
           placeholder="Password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
           className="w-full p-2 border rounded"
-          required
+          onChange={(e) => setPassword(e.target.value)}
         />
 
-        {/* Login Button */}
-        <button
-          type="submit"
-          className="w-full bg-blue-500 text-black py-2 rounded hover:bg-blue-600"
-        >
+        <button className="w-full bg-blue-500 py-2 rounded text-black">
           Login
         </button>
       </form>
@@ -67,4 +39,4 @@ function App() {
   );
 }
 
-export default App;
+export default Login;
