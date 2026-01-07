@@ -2,6 +2,8 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Login from "./pages/Login";
 import Toggle from "./pages/Toggle";
 import Todo from "./pages/Todo";
+import PropsDemo from "./pages/PropsDemo";
+
 
 
 import UseEffectDemo from "./pages/UseEffectDemo";
@@ -58,6 +60,8 @@ function App() {
       <Link style={linkStyle} to="/context">Context</Link>
       <Link style={linkStyle} to="/form">Form</Link>
       <Link style={linkStyle} to="/useref">useRef</Link>
+      <Link style={linkStyle} to="/props">Props</Link>
+
     </nav>
 
     {/* PAGE CONTENT */}
@@ -69,6 +73,8 @@ function App() {
         <Route path="/context" element={<ContextDemo />} />
         <Route path="/form" element={<FormValidation />} />
         <Route path="/useref" element={<UseRefDemo />} />
+        <Route path="/props" element={<PropsDemo />} />
+
       </Routes>
     </div>
   </BrowserRouter>
