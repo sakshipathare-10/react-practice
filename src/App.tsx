@@ -2,8 +2,8 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Login from "./pages/Login";
 import Toggle from "./pages/Toggle";
 import Todo from "./pages/Todo";
-
-
+import PropsDemo from "./pages/PropsDemo";
+import UseStateDemo from "./pages/UseStateDemo";
 import UseEffectDemo from "./pages/UseEffectDemo";
 import LiftingState from "./pages/LiftingState";
 import RoutingDemo from "./pages/RoutingDemo";
@@ -53,11 +53,15 @@ function App() {
     {/* NAVIGATION BAR */}
     <nav style={navStyle}>
       <Link style={linkStyle} to="/useeffect">useEffect</Link>
+      <Link style={linkStyle}to="/usestate">useState</Link>
       <Link style={linkStyle} to="/lifting">Lifting State</Link>
       <Link style={linkStyle} to="/routing">Routing</Link>
       <Link style={linkStyle} to="/context">Context</Link>
       <Link style={linkStyle} to="/form">Form</Link>
       <Link style={linkStyle} to="/useref">useRef</Link>
+      <Link style={linkStyle} to="/props">Props</Link>
+      <Link style={linkStyle} to="/todo">Todo</Link>
+       <Link style={linkStyle} to="/login">Login</Link>
     </nav>
 
     {/* PAGE CONTENT */}
@@ -69,6 +73,11 @@ function App() {
         <Route path="/context" element={<ContextDemo />} />
         <Route path="/form" element={<FormValidation />} />
         <Route path="/useref" element={<UseRefDemo />} />
+        <Route path="/props" element={<PropsDemo />} />
+        <Route path="/usestate" element={<UseStateDemo />} />
+        <Route path="/todo" element={< Todo />} />
+         <Route path="/login" element={<Login />} />
+          <Route path="/todo" element={<Toggle />} />
       </Routes>
     </div>
   </BrowserRouter>
