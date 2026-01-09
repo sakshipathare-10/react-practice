@@ -1,12 +1,16 @@
 import { Routes, Route } from "react-router-dom";
-import Students from "../pages/Students";
+import Students from "../pages/Students"; // ✅ correct relative path
 
-const AppRoutes = () => {
+function AppRoutes() {
   return (
     <Routes>
+      {/* Default route */}
+      <Route path="/" element={<Students />} />
+
+      {/* Students route */}
       <Route path="/students" element={<Students />} />
     </Routes>
   );
-};
+}
 
 export default AppRoutes;

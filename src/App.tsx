@@ -12,7 +12,7 @@ import FormValidation from "./pages/FormValidation";
 import UseRefDemo from "./pages/UseRefDemo";
 import FetchUsers from "./components/FetchUsers";
 import Navbar from "./components/Navbar";
-import AppRoutes from "./routes/AppRoutes";
+import AppRoutes from "./routes/AppRoutes"; 
 import Home from "./pages/Home";
 
 function App() {
