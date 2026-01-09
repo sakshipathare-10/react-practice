@@ -10,6 +10,9 @@ import RoutingDemo from "./pages/RoutingDemo";
 import ContextDemo from "./pages/ContextDemo";
 import FormValidation from "./pages/FormValidation";
 import UseRefDemo from "./pages/UseRefDemo";
+import FetchUsers from "./components/FetchUsers";
+
+import Home from "./pages/Home";
 
 function App() {
    // Nav style
@@ -67,6 +70,7 @@ function App() {
     {/* PAGE CONTENT */}
     <div style={pageStyle}>
       <Routes>
+          <Route path="/" element={<Home />} />
         <Route path="/useeffect" element={<UseEffectDemo />} />
         <Route path="/lifting" element={<LiftingState />} />
         <Route path="/routing" element={<RoutingDemo />} />
@@ -82,6 +86,11 @@ function App() {
     </div>
   </BrowserRouter>
 );
+(
+    <div>
+      <FetchUsers />
+    </div>
+  );
 
 }
 
