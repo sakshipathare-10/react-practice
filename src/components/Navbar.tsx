@@ -30,6 +30,7 @@ function Navbar() {
       <Link to="/useref">useRef</Link>
       <Link to="/form">Form</Link>
       <Link to="/todo">Todo</Link>
+      <Link to="/redux-card">Redux Image Card</Link>
 
       {/* Auth Section */}
       {!user ? (

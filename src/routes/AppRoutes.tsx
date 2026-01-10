@@ -17,6 +17,7 @@ import FormValidation from "../pages/FormValidation";
 import UseRefDemo from "../pages/UseRefDemo";
 import FetchUsers from "../components/FetchUsers";
 import TailwindPractice from "../pages/TailwindPractice";
+import ProductCardRedux from "../pages/ProductCardRedux";
 
 function AppRoutes() {
   return (
@@ -38,7 +39,7 @@ function AppRoutes() {
       <Route path="/" element={<Students />} />
       <Route path="/tailwind" element={<TailwindPractice />} />
 
-
+     <Route path="/redux-card" element={<ProductCardRedux />} />
       {/* Students route */}
       <Route path="/students" element={<Students />} />
       <Route path="/book" element={<Book />} />
