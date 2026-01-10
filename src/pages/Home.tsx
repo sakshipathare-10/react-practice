@@ -1,10 +1,5 @@
-const Home = () => {
-  return (
-    <div>
-      <h2>Welcome to React Practice</h2>
-      <p>Select a topic from navigation</p>
-    </div>
-  );
-};
+function Home() {
+  return <h2>Home Page (Context API Demo)</h2>;
+}
 
 export default Home;

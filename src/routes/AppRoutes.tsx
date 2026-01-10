@@ -4,6 +4,7 @@ import Students from "../pages/Students"; // ✅ correct relative path
 import Book from "../pages/Book";
 import Home from "../pages/Home";
 import Login from "../pages/Login";
+import Profile from "../pages/Profile";
 import Todo from "../pages/Todo";
 import Toggle from "../pages/Toggle";
 import PropsDemo from "../pages/PropsDemo";
@@ -32,6 +33,7 @@ function AppRoutes() {
       <Route path="/todo" element={<Todo />} />
       <Route path="/toggle" element={<Toggle />} />
       <Route path="/login" element={<Login />} />
+            <Route path="/profile" element={<Profile />} />
       <Route path="/fetch" element={<FetchUsers />} />
       <Route path="/" element={<Students />} />
       <Route path="/tailwind" element={<TailwindPractice />} />

@@ -1,46 +1,29 @@
 import { useState } from "react";
+import { useAuth } from "../context/AuthContext";
+import { useNavigate } from "react-router-dom";
 
 function Login() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [name, setName] = useState("");
+  const { login } = useAuth();
+  const navigate = useNavigate();
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-
-    console.log("Email:", email);
-    console.log("Password:", password);
-
-    alert("Login submitted");
+  // Handle login
+  const handleLogin = () => {
+    login(name);          // Set user in context
+    navigate("/profile"); // Redirect after login
   };
 
   return (
-    <div className="flex justify-center mt-16">
-      <form
-        onSubmit={handleSubmit}
-        className="bg-white p-6 rounded-lg shadow-md w-80 space-y-4"
-      >
-        <h2 className="text-2xl font-bold text-center">Login</h2>
-
-        <input
-          type="email"
-          placeholder="Email"
-          className="w-full p-2 border rounded"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-
-        <input
-          type="password"
-          placeholder="Password"
-          className="w-full p-2 border rounded"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
-
-        <button className="w-full bg-blue-500 py-2 rounded text-black">
-          Login
-        </button>
-      </form>
+    <div>
+      <h2>Login Page</h2>
+      <input
+        type="text"
+        placeholder="Enter username"
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+      />
+      <br /><br />
+      <button onClick={handleLogin}>Login</button>
     </div>
   );
 }
