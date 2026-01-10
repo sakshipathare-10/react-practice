@@ -15,6 +15,7 @@ function Navbar() {
       <Link to="/">Home</Link>
       <Link to="/students">Students</Link>
       <Link to="/book">Book (Axios)</Link>
+<Link to="/tailwind">Tailwind Practice</Link>
 
       <Link to="/usestate">useState</Link>
       <Link to="/useeffect">useEffect</Link>

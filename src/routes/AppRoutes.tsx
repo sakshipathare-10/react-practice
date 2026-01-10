@@ -15,6 +15,7 @@ import ContextDemo from "../pages/ContextDemo";
 import FormValidation from "../pages/FormValidation";
 import UseRefDemo from "../pages/UseRefDemo";
 import FetchUsers from "../components/FetchUsers";
+import TailwindPractice from "../pages/TailwindPractice";
 
 function AppRoutes() {
   return (
@@ -33,6 +34,8 @@ function AppRoutes() {
       <Route path="/login" element={<Login />} />
       <Route path="/fetch" element={<FetchUsers />} />
       <Route path="/" element={<Students />} />
+      <Route path="/tailwind" element={<TailwindPractice />} />
+
 
       {/* Students route */}
       <Route path="/students" element={<Students />} />
