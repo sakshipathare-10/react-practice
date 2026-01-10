@@ -6,6 +6,10 @@ function Login() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+
+    console.log("Email:", email);
+    console.log("Password:", password);
+
     alert("Login submitted");
   };
 
@@ -21,6 +25,7 @@ function Login() {
           type="email"
           placeholder="Email"
           className="w-full p-2 border rounded"
+          value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
 
@@ -28,6 +33,7 @@ function Login() {
           type="password"
           placeholder="Password"
           className="w-full p-2 border rounded"
+          value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
 
